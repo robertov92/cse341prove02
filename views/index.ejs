@@ -6,15 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
-    <h1>Hello</h1>
-    <form action="/add-book" method="POST">
-        <label>Book<input type="text" name="title"></label>
-        <label>Summary<textarea name="summary"></textarea></label>
-        <button type="submit">Add Book!</button>
-    </form>
+    <h1>Book Tracker</h1>
+    <div class="main-container">
+        <h2>Add a new book!</h2>
+        <form action="/add-book" method="POST">
+            <label>Book Title:<br><input type="text" name="title" required></label><br>
+            <label>Summary:<br><textarea name="summary" required></textarea></label><br>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+
 </body>
 
 </html>
