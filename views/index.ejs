@@ -16,8 +16,28 @@
         <form action="/add-book" method="POST">
             <label>Book Title:<br><input type="text" name="title" required></label><br>
             <label>Summary:<br><textarea name="summary" required></textarea></label><br>
-            <button type="submit">Add</button>
+            <button type="submit">Add book</button>
         </form>
+        <% if (books.length > 0) { %>
+            <h2>Your book list!</h2>
+            <% for (let book of books) { %>
+                <div class="book">
+                    <h3>
+                        <%= book.title %>
+                    </h3>
+                    <p>
+                        <%= book.summary %>
+                    </p>
+                    <form action="/remove-book" method="POST">
+                        <input type="hidden" name="deleteBook" value="<%= books.indexOf(book) %> ">
+                        <button type="submit">Delete this book</button>
+                    </form>
+                </div>
+            <% } %>
+        <% } else { %>
+            <h2>You have not saved any books yet!</h2>
+        <% } %>
+
     </div>
 
 </body>
