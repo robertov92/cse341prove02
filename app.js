@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+var PORT = process.env.PORT || 5000;
 
 const app = express();
 
@@ -18,4 +18,4 @@ app.get('/', (req, res, next) => {
     res.render('index');
 });
 
-app.listen(3000);
+app.listen(PORT);
