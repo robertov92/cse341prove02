@@ -18,6 +18,9 @@
             <label>Summary:<br><textarea name="summary" required></textarea></label><br>
             <button type="submit">Add book</button>
         </form>
+        <br>
+        <br>
+        <br>
         <% if (books.length > 0) { %>
             <h2>Your book list!</h2>
             <% for (let book of books) { %>
@@ -35,7 +38,7 @@
                 </div>
             <% } %>
         <% } else { %>
-            <h2>You have not saved any books yet!</h2>
+            <h2>You have not books saved!</h2>
         <% } %>
 
     </div>

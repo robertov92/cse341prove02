@@ -17,7 +17,7 @@ h1 {
 
 h2 {
     text-align: center;
-    margin: 25px 0 15px;
+    margin: 10px 0;
 }
 
 input,
@@ -47,5 +47,5 @@ p {
 }
 
 .book {
-    margin: 40px 0;
+    margin: 10px 0 20px;
 }
